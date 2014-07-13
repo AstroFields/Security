@@ -1,5 +1,5 @@
 {
-    "name"        : "wcm/astrofields-security",
+    "name"        : "WCM/AstroFields/Security",
     "version"     : "0.1.0",
     "description" : "Security Extension for the AstroFields framework",
     "keywords"    : [ "wordpress", "forms", "fields" ],
@@ -16,12 +16,12 @@
     },
     "minimum-stability" : "dev",
     "require"     : {
-        "php"             : ">=5.3",
-        "wcm/astrofields" : "*"
+        "php"                  : ">=5.3",
+        "WCM/AstroFields/Core" : "*"
     },
     "autoload"    : {
         "psr-4" : {
-            "WCM\\AstroFields\\" : "src\\"
+            "WCM\\AstroFields\\Security\\" : "src/"
         }
     }
 }
