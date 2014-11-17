@@ -16,15 +16,9 @@
     },
     "minimum-stability" : "dev",
     "require"     : {
-        "php"                  : ">=5.3",
-        "WCM/AstroFields/Core" : "*"
+        "php"                         : ">=5.3",
+        "wecodemore/astrofields-core" : "*"
     },
-    "repositories": [
-        {
-            "type" : "vcs",
-            "url"  : "https://github.com/AstroFields/Core"
-        }
-    ],
     "autoload"    : {
         "psr-4" : {
             "WCM\\AstroFields\\Security\\" : "src/"
