@@ -1,5 +1,5 @@
 {
-    "name"        : "WCM/AstroFields/Security",
+    "name"        : "wecodemore/astrofields-security",
     "version"     : "0.1.0-alpha1",
     "description" : "Security Extension for the AstroFields framework",
     "keywords"    : [ "wordpress", "forms", "fields" ],
