@@ -2,21 +2,34 @@
 
 namespace WCM\AstroFields\Security\Commands;
 
-use WCM\AstroFields\Core\Commands\ContextAwareInterface;
+use WCM\AstroFields\Core\Commands;
+use WCM\AstroFields\Core\Mediators\EntityInterface;
 
-class SanitizeBoolean implements \SplObserver, ContextAwareInterface
+class SanitizeBoolean implements
+	Commands\CommandInterface,
+	Commands\ContextAwareInterface
 {
 	/** @type string */
 	protected $context = 'sanitize_{type}_meta_{key}';
 
 	/**
-	 * @param \SplSubject $subject
-	 * @param array       $data
-	 * @return array|string|null
+	 * @param string          $key
+	 * @param string          $value
+	 * @param string          $type
+	 * @param EntityInterface $command
+	 * @param Array           $data
+	 * @return Array | string | null
 	 */
-	public function update( \SplSubject $subject, Array $data = null )
+	public function update(
+		$key = '',
+		$value = '',
+		$type = '',
+		EntityInterface $command = null,
+		Array $data = null
+		)
 	{
-		$value = $data['args'][0];
+		if ( empty( $value ) )
+			return $value;
 
 		return is_array( $value )
 			? array_map( array( $this, 'sanitize' ), $value )
