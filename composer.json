@@ -35,7 +35,6 @@
         }
     },
     "config": {
-        "bin-dir"             : "bin",
-        "optimize-autoloader" : true
+        "bin-dir" : "bin"
     }
 }
